@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+:root {
+    --red: #fa4f09;
+    --black: #333;
+    --white: #fff;
+    --light-color: #666;
+    --light-bg: #eee;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    // text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+
+    &::-webkit-scrollbar {
+        width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--red);
+        border-radius: 5rem;
+    }
+}
+
+body {
+    background: var(--white);
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--light-bg);
+    z-index: 999;
+
+    .logo {
+        // margin-right: auto;
+        // display: block;
+        color: var(--black);
+        font-size: 2.5rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .navigation {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-around;
+        gap: 1.5rem;
+        color: var(--black);
+        font-size: 2rem;
+
+        .nav-link {
+            &:hover {
+                color: var(--red);
+            }
+        }
+    }
+
+    .ionic-moon,
+    .ionic-list {
+        font-size: 2.5rem;
+        color: var(--black);
+        cursor: pointer;
+
+        &:hover {
+            color: var(--red);
+        }
+    }
+
+    .ionic-list {
+        display: none;
+        // visibility: hidden;
+    }
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 50%;
+    }
+
+    .header {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 45%;
+    }
+
+    .header {
+        padding: 2rem;
+        // display: ;
+
+        .logo {
+        }
+
+        .nav {
+            // display: none;
+        }
+
+        .navigation {
+            // position: relative;
+            // background-color: var(--red);
+        }
+
+        .nav {
+            position: absolute;
+            top: 56.3px;
+            right: 0;
+            // bottom: 0;
+            left: 30%;
+            // width: 80%;
+            background-color: var(--light-bg);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ionic-list {
+            display: inline-block;
+            // visibility: visible;
+        }
+    }
+}
